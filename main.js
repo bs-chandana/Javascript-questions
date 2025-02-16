@@ -1,4 +1,4 @@
-// const cart = [
+// 1)const cart = [
 //     { item: "Laptop", price: 800, quantity: 1 },
 //     { item: "Mouse", price: 20, quantity: 2 },
 //     { item: "Keyboard", price: 50, quantity: 1 }
@@ -8,7 +8,7 @@
 //    console.log(total>100?total-(total*0.10):"")
    
    
-// A traffic light changes based on car density:
+// 2)A traffic light changes based on car density:
 // High traffic → green light for 60 seconds
 // Medium traffic → green light for 40 seconds
 // Low traffic → green light for 20 seconds
@@ -35,7 +35,7 @@
 // trafficLight(100)
 
 
-// Auto-Suggestion in Search Bar
+// 3)Auto-Suggestion in Search Bar
 // Implement a simple auto-suggest system:
 // Given an array of words and a user input, return possible suggestions.
 
@@ -54,7 +54,26 @@
 // }
 // autoSuggestion('ap')
 
-//  Movie Recommendation System
+//  4)Movie Recommendation System
+// const movies = [
+//     { title: "Inception", genre: "Sci-Fi" },
+//     { title: "The Godfather", genre: "Crime" },
+//     { title: "Interstellar", genre: "Sci-Fi" },
+//     { title: "Joker", genre: "Drama" },
+//     { title: "Avengers", genre: "Action" }
+//   ];
+  
+//   function recommendMovies(favoriteGenre) {
+//     return movies
+//       .filter(movie => movie.genre === favoriteGenre)
+//       .map(movie => movie.title);
+//   }
+  
+//   console.log(recommendMovies("Sci-Fi"));  // ["Inception", "Interstellar"]
+//   console.log(recommendMovies("Crime"));   // ["The Godfather"]
+
+// online shopping filter
+
 
 const products = [
     { name: "iPhone 13", category: "Electronics" },
@@ -71,18 +90,4 @@ const products = [
   
   console.log(filterProducts("Electronics")); 
   console.log(filterProducts("Nike"));       
-const products = [
-    { name: "iPhone 13", category: "Electronics" },
-    { name: "MacBook Pro", category: "Electronics" },
-    { name: "Nike Shoes", category: "Fashion" },
-    { name: "Adidas Jacket", category: "Fashion" }
-  ];
-  
-  function filterProducts(query) {
-    return products
-      .filter(p => p.name.includes(query) || p.category.includes(query))
-      .map(p => p.name);
-  }
-  
-  console.log(filterProducts("Electronics")); // ["iPhone 13", "MacBook Pro"]
-  console.log(filterProducts("Nike"));        // ["Nike Shoes"]
+   
