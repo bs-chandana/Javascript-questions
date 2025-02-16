@@ -56,41 +56,33 @@
 
 //  Movie Recommendation System
 
-// const movies = [
-//   { title: "Inception", genre: "Sci-Fi" },
-//   { title: "The Godfather", genre: "Crime" },
-//   { title: "Interstellar", genre: "Sci-Fi" },
-//   { title: "Joker", genre: "Drama" },
-//   { title: "Avengers", genre: "Action" }
-// ];
-
-// function recommendMovies(favoriteGenre) {
-//   return movies
-//     .filter(movie => movie.genre.toLowerCase() === favoriteGenre.toLowerCase())
-//     .map(movie => movie.title);
-// }
-
-// console.log(recommendMovies("Sci-Fi"));  
-// console.log(recommendMovies("Crime"));   
-// console.log(recommendMovies("Drama"));
-
-//  Online Store Product Filter
-
 const products = [
-  { name: "iPhone 13", category: "Electronics" },
-  { name: "MacBook Pro", category: "Electronics" },
-  { name: "Nike Shoes", category: "Fashion" },
-  { name: "Adidas Jacket", category: "Fashion" }
-];
-
-function filterProducts(query) {
-  return products
-    .filter(product => 
-      product.name.toLowerCase().includes(query.toLowerCase()) || 
-      product.category.toLowerCase().includes(query.toLowerCase()))
-    .map(product => product.name);
-}
-
-console.log(filterProducts("Electronics"));
-console.log(filterProducts("Nike"));         
-console.log(filterProducts("Fashion"));      
+    { name: "iPhone 13", category: "Electronics" },
+    { name: "MacBook Pro", category: "Electronics" },
+    { name: "Nike Shoes", category: "Fashion" },
+    { name: "Adidas Jacket", category: "Fashion" }
+  ];
+  
+  function filterProducts(query) {
+    return products
+      .filter(p => p.name.includes(query) || p.category.includes(query))
+      .map(p => p.name);
+  }
+  
+  console.log(filterProducts("Electronics")); 
+  console.log(filterProducts("Nike"));       
+const products = [
+    { name: "iPhone 13", category: "Electronics" },
+    { name: "MacBook Pro", category: "Electronics" },
+    { name: "Nike Shoes", category: "Fashion" },
+    { name: "Adidas Jacket", category: "Fashion" }
+  ];
+  
+  function filterProducts(query) {
+    return products
+      .filter(p => p.name.includes(query) || p.category.includes(query))
+      .map(p => p.name);
+  }
+  
+  console.log(filterProducts("Electronics")); // ["iPhone 13", "MacBook Pro"]
+  console.log(filterProducts("Nike"));        // ["Nike Shoes"]
